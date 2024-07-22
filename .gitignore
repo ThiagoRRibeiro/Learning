@@ -2,8 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/MAUI/.vs
-/MAUI/Phoneword/bin/Debug
-/MAUI/Phoneword/obj
-/MAUI/Phoneword/.vs
+bin
+obj
+.vs
 *.user
