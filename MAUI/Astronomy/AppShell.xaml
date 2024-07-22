@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Astronomy.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Astronomy"
+    xmlns:pages="clr-namespace:Astronomy.Pages"
+    Title="Astronomy">
+    
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
+            <Image Source="moon.png" />
+        </Grid>
+    </Shell.FlyoutHeader>
+    <!--Tab Bar navigation-->
+    <!--<TabBar>
+        <Tab Title="Moon Phase" Icon="moon.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:MoonPhasePage}" />
+        </Tab>
+        <Tab Title="Sunrise" Icon="sun.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:SunrisePage}"/>
+        </Tab>
+    </TabBar>-->
+
+    <!--Flyout navigation-->
+    <!--<FlyoutItem Title="Moon Phase" Icon="moon.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:MoonPhasePage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Sunrise" Icon="sun.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:SunrisePage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="About" Icon="question.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:AboutPage}"/>
+    </FlyoutItem>-->
+
+    <!--Both Tab Bar and Flyout navigation-->
+    <FlyoutItem Title="Moon Phase" Icon="moon.png">
+        <ShellContent Title="Moon Phase" Icon="moon.png" ContentTemplate="{DataTemplate pages:MoonPhasePage}"/>
+        <ShellContent Title="Sunrise" Icon="sun.png" ContentTemplate="{DataTemplate pages:SunrisePage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="About" Icon="question.png">
+        <ShellContent ContentTemplate="{DataTemplate pages:AboutPage}"/>
+    </FlyoutItem>
+</Shell>
