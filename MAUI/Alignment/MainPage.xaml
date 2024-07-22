@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Alignment.MainPage">
+    <Grid Padding="20" RowSpacing="10" RowDefinitions="50,50,*">
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Label Text="Horizontal" VerticalOptions="Center"></Label>
+            <Button Text="Start" Clicked="OnHorizontalStartClicked"></Button>
+            <Button Text="Center" Clicked="OnHorizontalCenterClicked"></Button>
+            <Button Text="End" Clicked="OnHorizontalEndClicked"></Button>
+            <Button Text="Fill" Clicked="OnHorizontalFillClicked"></Button>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="1" Spacing="10">
+            <Label Text="Vertical" VerticalOptions="Center"></Label>
+            <Button Text="Start" Clicked="OnVerticalStartClicked"></Button>
+            <Button Text="Center" Clicked="OnVerticalCenterClicked"></Button>
+            <Button Text="End" Clicked="OnVerticalEndClicked"></Button>
+            <Button Text="Fill" Clicked="OnVerticalFillClicked"></Button>
+        </HorizontalStackLayout>
+
+        <Label x:Name="target" Grid.Row="2" FontSize="25" BackgroundColor="Silver" Text="Hello"></Label>
+    </Grid>
+</ContentPage>
