@@ -57,8 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\comet.png" />
 	  <None Remove="Resources\Images\moon.png" />
 	  <None Remove="Resources\Images\question.png" />
+	  <None Remove="Resources\Images\starfield.png" />
 	  <None Remove="Resources\Images\sun.png" />
 	</ItemGroup>
 
@@ -70,6 +72,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AstronomicalBodiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AstronomicalBodyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MoonPhasePage.xaml">

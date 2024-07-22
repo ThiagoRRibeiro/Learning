@@ -36,12 +36,26 @@
     </FlyoutItem>-->
 
     <!--Both Tab Bar and Flyout navigation-->
-    <FlyoutItem Title="Moon Phase" Icon="moon.png">
+    <!--<FlyoutItem Title="Moon Phase" Icon="moon.png">
         <ShellContent Title="Moon Phase" Icon="moon.png" ContentTemplate="{DataTemplate pages:MoonPhasePage}"/>
         <ShellContent Title="Sunrise" Icon="sun.png" ContentTemplate="{DataTemplate pages:SunrisePage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="About" Icon="question.png">
         <ShellContent ContentTemplate="{DataTemplate pages:AboutPage}"/>
+    </FlyoutItem>-->
+
+    <FlyoutItem Title="Astronomy" Icon="moon.png">
+        <ShellContent Title="Moon" Icon="moon.png"
+                ContentTemplate="{DataTemplate pages:MoonPhasePage}" />
+        <ShellContent Title="Daylight" Icon="sun.png"
+            ContentTemplate="{DataTemplate pages:SunrisePage}" />
+        <ShellContent Title="Bodies" Icon="comet.png"
+            ContentTemplate="{DataTemplate pages:AstronomicalBodiesPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="About" Icon="question.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate pages:AboutPage}"/>
     </FlyoutItem>
 </Shell>
