@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckb7y1eoebyud"]
+
+[ext_resource type="Script" path="res://Sources/Player.cs" id="1_23jkp"]
+[ext_resource type="Material" uid="uid://15wwaflnhptn" path="res://Art/EyeMat.material" id="1_82gbw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iqkt0"]
+albedo_color = Color(1, 0, 0, 1)
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_dxwub"]
+
+[node name="Player" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_iqkt0")
+mesh = SubResource("SphereMesh_dxwub")
+skeleton = NodePath("../Environment")
+script = ExtResource("1_23jkp")
+
+[node name="Player2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.100549, 0.283611, -0.332536)
+material_override = ExtResource("1_82gbw")
+mesh = SubResource("SphereMesh_dxwub")
+skeleton = NodePath("../../Environment")
+
+[node name="Player3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.116319, 0.280449, -0.323615)
+material_override = ExtResource("1_82gbw")
+mesh = SubResource("SphereMesh_dxwub")
+skeleton = NodePath("../../Environment")

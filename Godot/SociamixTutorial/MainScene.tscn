@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://x3knelfyrmtm"]
+
+[ext_resource type="PackedScene" uid="uid://ckb7y1eoebyud" path="res://Prefabs/player.tscn" id="1_yula2"]
+[ext_resource type="Script" path="res://Sources/Target.cs" id="2_ql47x"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tu4rk"]
+sky_top_color = Color(0.0860011, 0.347122, 0.999999, 1)
+sky_horizon_color = Color(0.991629, 0.705038, 0.543106, 1)
+sky_curve = 0.0803829
+ground_bottom_color = Color(0.393086, 0.393086, 0.393085, 1)
+ground_horizon_color = Color(0.666569, 0.666569, 0.666569, 1)
+ground_curve = 0.0828203
+
+[sub_resource type="Sky" id="Sky_86grn"]
+sky_material = SubResource("ProceduralSkyMaterial_tu4rk")
+
+[sub_resource type="Environment" id="Environment_2pobt"]
+background_mode = 2
+sky = SubResource("Sky_86grn")
+ambient_light_source = 1
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_nuneb"]
+size = Vector3(10, 0.01, 10)
+
+[sub_resource type="SphereMesh" id="SphereMesh_cwawx"]
+
+[node name="MyScene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.552214, 0.833702, 0, -0.833702, -0.552214, 0, 11.261, -3.90697)
+light_color = Color(1, 0.992157, 0.972549, 1)
+light_energy = 0.981
+shadow_enabled = true
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2pobt")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.863237, 0.504799, 0, -0.504799, 0.863237, 0, 3.11963, 5.00584)
+fov = 75.4
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nuneb")
+skeleton = NodePath("")
+
+[node name="Player" parent="." node_paths=PackedStringArray("Target") instance=ExtResource("1_yula2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.0197663)
+Target = NodePath("../Target")
+
+[node name="Target" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26154, 2.41805)
+script = ExtResource("2_ql47x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Target"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.185665, 0)
+mesh = SubResource("SphereMesh_cwawx")
