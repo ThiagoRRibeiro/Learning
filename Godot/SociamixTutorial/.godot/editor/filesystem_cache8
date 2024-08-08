@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1723076352
+MainScene.tscn::PackedScene::1672776593383027882::1722901154::0::1::::<><>::uid://ckb7y1eoebyud::::res://Prefabs/player.tscn
+::res://Art/::1722900447
+EyeMat.material::StandardMaterial3D::1888216336758882423::1722900447::0::1::::<><>::
+icon.svg::CompressedTexture2D::5013682460396685823::1722635558::1722638955::1::::<><>::
+::res://Prefabs/::1722899314
+player.tscn::PackedScene::5478781356770660499::1722899314::0::1::::<><>::res://Sources/Player.cs<>uid://15wwaflnhptn::::res://Art/EyeMat.material
+::res://Sources/::1722901092
+Player.cs::CSharpScript::-1::1722901092::0::1::::<>MeshInstance3D<>::
